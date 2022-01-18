@@ -80,7 +80,7 @@
             <ul class="ticket-list">
               <li>September <span class="sold-out">Sold out</span></li>
               <li>October <span class="sold-out">Sold out</li>
-              <li>November <span class="quanlity">3</li>
+              <li>November <span class="email">3</li>
             </ul>
             
           <!--Places-->
@@ -128,7 +128,38 @@
   </div>
   
   <div class="modal">
+    <div class="modal-container">
+      <div class="modal-close">
+        <i class="ti-close"></i>
+      </div>
 
+      <header class="modal-header">
+        <i class="modal-heading-icon ti-bag"></i>
+        Tickets
+      </header>
+
+      <div class="modal-body">
+        <label for="ticket-quanlity" class="modal-label">
+          <i class="ti-shopping-cart"></i>
+          Tickets, $15 per person
+        </label>
+        <input id="ticket-quanlity" type="text" class="modal-input" placeholder="How many?">
+        
+        <label for="ticket-email" class="modal-label">
+          <i class="ti-user"></i>
+          Send to
+        </label>
+        <input id="ticket-email" type="email" class="modal-input" placeholder="Enter email...">
+
+        <button id="buy-tickets">
+          Pay <i class="ti-check"></i>
+        </button>
+      </div>
+
+      <footer class="modal-footer">
+        <p class="modal-help">Need <a href="">help?</a></p>
+      </footer>
+    </div>
   </div>
 
   <script></script>
