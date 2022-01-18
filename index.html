@@ -91,7 +91,7 @@
                   <h3 class="place-heading">New york</h3>
                   <p class="place-time">Fri 27 Nov 2020</p>
                   <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                  <a href="#" class="place-buy-btn">Buy tickets</a>
+                  <button class="place-buy-btn js-buy-ticket">Buy tickets</button>
                 </div>
               </div>
               <div class="place-item">
@@ -100,7 +100,7 @@
                   <h3 class="place-heading">New york</h3>
                   <p class="place-time">Fri 27 Nov 2020</p>
                   <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                  <a href="#" class="place-buy-btn">Buy tickets</a>
+                  <button class="place-buy-btn js-buy-ticket">Buy tickets</button>
                 </div>
               </div>
               <div class="place-item">
@@ -109,7 +109,7 @@
                   <h3 class="place-heading">New york</h3>
                   <p class="place-time">Fri 27 Nov 2020</p>
                   <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                  <a href="#" class="place-buy-btn">Buy tickets</a>
+                  <button class="place-buy-btn js-buy-ticket">Buy tickets</button>
                 </div>
               </div>
               <div class="clear"></div>
@@ -127,9 +127,9 @@
     </div>
   </div>
   
-  <div class="modal">
+  <div class="modal js-modal">
     <div class="modal-container">
-      <div class="modal-close">
+      <div class="modal-close js-modal-close">
         <i class="ti-close"></i>
       </div>
 
@@ -162,6 +162,27 @@
     </div>
   </div>
 
-  <script></script>
+  <script>
+    /*
+     document là đại diện trong trang web 
+     querySelectorAll lấy tất cả ra class trùng tên
+    */
+    const buyBtns = document.querySelectorAll('.js-buy-ticket')
+    /*Vòng lặp for
+     Tạo thêm 1 biến mới buyBtn và biến mới nó lưu lần lượt 3 cái nút
+     Vòng lặp for sẽ chạy 3 lần tương ứng với 3 nút button
+    */
+    const modal = document.querySelector('.js-modal')
+    const modalClose = document.querySelector('.js-modal-close')
+    function showBuyTickets() {
+      modal.classList.add('open')
+    }
+
+    for (const buyBtn of buyBtns){
+      buyBtn.addEventListener('click', showBuyTickets)
+      // addEventListener lắng nghe
+      // Khi click vào nút buyBtn thì hàm showBuyTickets sẽ được gọi. Trong hàm ShowBuyTickets gọi doạn modal.classList.add('open') 
+    }
+  </script>
 </body>
 </html>
