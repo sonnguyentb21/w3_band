@@ -308,6 +308,7 @@ display: inline-block;
     max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;
+    animation: modalFadeIn ease .5s;
 }
 
 .modal-header {
@@ -377,4 +378,15 @@ display: inline-block;
 
 .modal-footer a{
     color: #2196f3;
+}
+
+@keyframes modalFadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
 }

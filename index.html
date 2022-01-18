@@ -128,7 +128,7 @@
   </div>
   
   <div class="modal js-modal">
-    <div class="modal-container">
+    <div class="modal-container js-modal-container">
       <div class="modal-close js-modal-close">
         <i class="ti-close"></i>
       </div>
@@ -168,21 +168,40 @@
      querySelectorAll lấy tất cả ra class trùng tên
     */
     const buyBtns = document.querySelectorAll('.js-buy-ticket')
+
+    const modal = document.querySelector('.js-modal')
+    // querySelector là chỉ lấy ra thành phần được gọi đến
+    const modalClose = document.querySelector('.js-modal-close')
+
+    const modalContainer = document.querySelector('.js-modal-container')
+
+    //Hàm hiển thi form modal mua vé(thêm class open vào modal)
+    function showBuyTickets() {
+        modal.classList.add('open')
+    }
+
+    //Hàm ẩn modal mua vé (gỡ bỏ class open của modal)
+    function hideBuyTickets() {
+        modal.classList.remove('open')
+    }
+
     /*Vòng lặp for
      Tạo thêm 1 biến mới buyBtn và biến mới nó lưu lần lượt 3 cái nút
      Vòng lặp for sẽ chạy 3 lần tương ứng với 3 nút button
     */
-    const modal = document.querySelector('.js-modal')
-    const modalClose = document.querySelector('.js-modal-close')
-    function showBuyTickets() {
-      modal.classList.add('open')
-    }
-
     for (const buyBtn of buyBtns){
       buyBtn.addEventListener('click', showBuyTickets)
       // addEventListener lắng nghe
       // Khi click vào nút buyBtn thì hàm showBuyTickets sẽ được gọi. Trong hàm ShowBuyTickets gọi doạn modal.classList.add('open') 
     }
+    // Nghe hành vi click vào button close
+    modalClose.addEventListener('click', hideBuyTickets)
+
+    modal.addEventListener('click', hideBuyTickets)
+
+    modalContainer.addEventListener('click', function (event){
+      event.stopPropagation()
+    })
   </script>
 </body>
 </html>
