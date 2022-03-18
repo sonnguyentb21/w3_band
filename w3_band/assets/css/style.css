@@ -18,6 +18,8 @@ html{
 2. Kích thước(width, height)
 3. Màu sắc
 4. Kiểu dáng(kiểu chữ, hình tròn,vuông,...) */
+
+/* Common*/
 .clear{
     clear: both;
 }
@@ -25,6 +27,29 @@ html{
 .text-white{
     color: #fff !important;
 }
+.text-center{
+    text-align: center !important;
+}
+.row{
+    margin-left : -8px;
+    margin-right : -8px;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-half{
+    width: 50%;
+}
+.col-third{
+    width: 33.33333%;
+}
+.col-full{
+    width: 100%;
+}
+/*Main*/
+
 #main{
 
 }
@@ -175,11 +200,6 @@ display: inline-block;
     margin-top: 48px;
 }
 
-#content .member-item{
-    float: left;
-    width: calc(100% / 3);
-    text-align: center;
-}
 
 #content .member-name{
     font-size: 15px;
@@ -228,16 +248,10 @@ display: inline-block;
     margin-top: -3px;
 }
 
-
 /* Places */
 .places-list{
-    margin: 32px -8px 0;
-}
-
-.place-item{
-    float: left;
-    width: 33.33333%;
-    padding: 0 8px;
+    margin-top: 32px;
+    margin-bottom:48px; 
 }
 
 .place-img{
@@ -280,6 +294,10 @@ display: inline-block;
 .place-buy-btn:hover{
     color: #000;
     background-color: #ccc;
+}
+/* Contact form*/
+.contact-content{
+    margin-top: 48px;
 }
 
 /* Footer-section */
