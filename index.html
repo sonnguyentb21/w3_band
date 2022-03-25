@@ -67,7 +67,6 @@
               <p class="member-name">Name</p>
               <img src="./w3_band/assets/img/team/member1.jpg" alt="Name" class="member-img">
             </div>
-            <div class="clear"></div>
           </div>
         </div>
       <!-- Tour-Dates -->
@@ -91,7 +90,7 @@
                   <h3 class="place-heading">New york</h3>
                   <p class="place-time">Fri 27 Nov 2020</p>
                   <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                  <button class="place-buy-btn js-buy-ticket">Buy tickets</button>
+                  <button class="btn js-buy-ticket">Buy tickets</button>
                 </div>
               </div>
               <div class="col col-third text-center">
@@ -100,7 +99,7 @@
                   <h3 class="place-heading">New york</h3>
                   <p class="place-time">Fri 27 Nov 2020</p>
                   <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                  <button class="place-buy-btn js-buy-ticket">Buy tickets</button>
+                  <button class="btn js-buy-ticket">Buy tickets</button>
                 </div>
               </div>
               <div class="col col-third text-center">
@@ -109,50 +108,56 @@
                   <h3 class="place-heading">New york</h3>
                   <p class="place-time">Fri 27 Nov 2020</p>
                   <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                  <button class="place-buy-btn js-buy-ticket">Buy tickets</button>
+                  <button class="btn js-buy-ticket">Buy tickets</button>
                 </div>
               </div>
-              <div class="clear"></div>
             </div>
           </div>
         </div>
-      <!-- Contact section -->
+      <!--Begin Contact section -->
         <div class="content-section">
           <h2 class="section-heading">CONTACT</h2>
           <p class="section-sub-heading">Fan? Drop a note!</p>
           <div class="row contact-content">
-            <div class="col col-half">
+            <div class="col col-half contact-info">
               <p><i class="ti-location-pin"></i>Chicago,US</p>
               <p><i class="ti-mobile"></i>Phone: +00 151516</p>
               <p><i class="ti-email"></i>Email: mail@gmail.com</p>
             </div>
-            <div class="col col-half">
+            <div class="col col-half contact-form">
               <form action="">
-                <div class="row">
+                <div class="row contact-content">
                   <div class="col col-half">
-                    <input type="text" name="" placeholder="Name" id="" class="form-control">
+                    <input type="text" name="" placeholder="Name" required id="" class="form-control">
                   </div>
                   <div class="col col-half">
-                    <input type="email" name="" placeholder="Email" id="" class="form-control">
+                    <input type="email" name="" placeholder="Email" required id="" class="form-control">
                   </div>
                 </div>
-                <div class="row">
+                <div class="row mt-8px">
                   <div class="col col-full">
-                    <input type="text" name="" placeholder="Message" id="" class="form-control">
+                    <input type="text" name="" placeholder="Message" required id="" class="form-control">
                   </div>
                 </div>
-                <input type="submit" value="SEND">
+                <input class="pull-right btn  mt-16px" type="submit" value="SEND">
               </form>
             </div>
           </div>
 
         </div>
+
+      <!--End: Contact section -->
+
+      <div class="map-section">
+        <img src="./w3_band/assets/img/map.jpg" alt="">
+      </div>
     </div>
 
     <div id="footer">
     </div>
   </div>
-  
+
+  <!-- Inside btn Buy Tickets -->
   <div class="modal js-modal">
     <div class="modal-container js-modal-container">
       <div class="modal-close js-modal-close">
